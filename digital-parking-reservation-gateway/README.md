@@ -38,7 +38,7 @@ Contains:
 - `«include»` relationship
 - `«extend»` relationship
 
-![Use-Case Diagram](uml/use-case-diagram.png)
+![Use-Case Diagram](uml/usecase-diagram.png)
 
 ### 3. Use-Case Flow Specification
 
