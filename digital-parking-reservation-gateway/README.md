@@ -49,7 +49,7 @@ Core use case:
 
 # Lab 2
 
-## Jira – Agile Project Management
+## Lab 2: Agile Backlog Creation & Sprint Simulation in Jira
 
 The Digital Parking Reservation Gateway was planned and managed using Jira Scrum.
 The backlog consisted of Epics and User Stories, which were estimated using Story
@@ -66,6 +66,10 @@ Client-Server Architecture was selected based on centralized management, data
 consistency, security, and performance requirements.
 
 ### Deliverables
-
+### 1. UML Component Diagram  
+UML component diagram showing the five main components and their interfaces for the Digital Parking Reservation Gateway.  
  ![Component Diagram](Lab3_Component_Diagram.png)  
- [Architectural Justification](Lab3_Architectural_Justification.pdf)
+  
+### 2. Architectural Justification   
+Justification for selecting the Client-Server architecture based on the system’s requirements.  
+[Architectural Justification](Lab3_Architectural_Justification.pdf)
