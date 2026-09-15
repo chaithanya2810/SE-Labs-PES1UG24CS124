@@ -67,5 +67,5 @@ consistency, security, and performance requirements.
 
 ### Deliverables
 
-- ![Component Diagram](Lab3_Component_Diagram.png)
-- [Architectural Justification](Lab3_Architectural_Justification.pdf)
+ ![Component Diagram](Lab3_Component_Diagram.png)  
+ [Architectural Justification](Lab3_Architectural_Justification.pdf)
