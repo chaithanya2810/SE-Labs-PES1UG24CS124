@@ -57,7 +57,7 @@ Task 4: Side-by-side reveal tested.
 
 ## 5. Evidence
 
-Before Video:
+[Before video](Lab4/before.mp4)
 
 After Video:
 
