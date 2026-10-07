@@ -70,7 +70,7 @@ https://drive.google.com/file/d/1xlNWQt7jShY9S2aW8alI44_N13H711S8/view?usp=drive
 **Details/Evidence PDF:**  
 The comprehensive project report and evidence can be found in the accompanying PDF:  
 
-[Details PDF](Lab4/Lab4_VibeCoding_Evidence.pdf)
+[Details PDF](Lab_4_Details.pdf)
 
 ## 6. Final Commit History
 a32871c Add side-by-side card reveal   
