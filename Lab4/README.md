@@ -25,25 +25,19 @@ https://github.com/chaithanya2810/55_card_predictor
 ### Task 1 – Card Rank Comparison
 Fixed the rank comparison bug by using `numeric_rank` instead of string comparison.
 
-Card order:
-```text
-2 < 3 < ... < 10 < J < Q < K < A
-
+Card order: 2 < 3 < ... < 10 < J < Q < K < A
 Commit: 28de9cd
 
 ### Task 2 – Win Streak Multipliers 
 Added consecutive win streak tracking and increasing score multipliers. Wrong guesses reset the streak and multiplier.
-
 Commit: 3d09bfd
 
 ### Task 3 – Tie / PUSH
 Added tie handling for equal-rank cards. A tie displays PUSH, keeps the score unchanged, and preserves the streak.
-
 Commit: 454e103
 
 ### Task 4 – Side-by-Side Card Reveal
 Added a brief reveal showing the previous and newly drawn cards side-by-side before the new card becomes active.
-
 Commit: a32871c
 
 ## 4. Testing
@@ -59,10 +53,9 @@ Task 4: Side-by-side reveal tested.
 
 [Before video](Lab4/before.mp4)
 
-After Video:
+[After Video](Lab4/after.mp4)
 
-Chat History:
-
+Chat History: https://chatgpt.com/share/6ac63151-3368-83ee-aeac-7751ecd27ddb 
 
 Evidence PDF:
 Lab4_VibeCoding_Evidence.pdf
