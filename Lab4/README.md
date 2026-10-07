@@ -54,14 +54,16 @@ Task 4: Side-by-side reveal tested.
 
 ## 5. Evidence
 
-**BEFORE VIDEO**
+**BEFORE VIDEO**  
 
 This video shows the original High-Low Card Predictor application before making any changes.   
 https://drive.google.com/file/d/1hk89N13aUNrVI1nAjNT0PR8Xrdip7OL6/view?usp=drivesdk  
   
-**AFTER VIDEO**
+**AFTER VIDEO**  
+
 This video shows the application after fixing the bug and implementing all required features.  
 https://drive.google.com/file/d/1xlNWQt7jShY9S2aW8alI44_N13H711S8/view?usp=drivesdk  
+
 
 **Chat History:** https://chatgpt.com/share/6ac63151-3368-83ee-aeac-7751ecd27ddb 
 
