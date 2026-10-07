@@ -49,10 +49,11 @@ Task 4: Side-by-side reveal tested.
 
 ## 5. Evidence
 
+1. BEFORE VIDEO
 This video shows the original High-Low Card Predictor application before making any changes.   
 [Before video](Lab4/before.mp4)
 
-
+2. AFTER VIDEO
 This video shows the application after fixing the bug and implementing all required features.
 [After Video](Lab4/after.mp4)
 
