@@ -23,7 +23,8 @@ https://github.com/chaithanya2810/55_card_predictor
 ### Task 1 – Card Rank Comparison
 Fixed the rank comparison bug by using `numeric_rank` instead of string comparison.
 
-Card order: 2 < 3 < ... < 10 < J < Q < K < A
+Card order: 2 < 3 < ... < 10 < J < Q < K < A  
+
 Commit: 28de9cd
 
 ### Task 2 – Win Streak Multipliers 
