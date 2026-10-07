@@ -3,10 +3,9 @@
 ## High-Low Card Predictor
 
 ### Student Details
-**Name:** Chaithanya N 
-**SRN:** PES1UG24CS124
-**Assignment:** Lab 4 – Vibe Coding  
-**Type:** Individual Assignment  
+**Name:** Chaithanya N   
+**SRN:** PES1UG24CS124  
+**Assignment:** Lab 4 – Vibe Coding    
 **Vibe Coding Tool:** ChatGPT
 
 ## 1. Objective
@@ -55,7 +54,7 @@ Demonstrates the baseline state of the project before modifications were applied
 [Before video](Lab4/before.mp4)
 
 
-Demonstrates the finalized version, showcasing the successful implementation of "Vibe Coding" techniques and features.
+Demonstrates the finalized version, with all the modifications.  
 [After Video](Lab4/after.mp4)
 
 Chat History: https://chatgpt.com/share/6ac63151-3368-83ee-aeac-7751ecd27ddb 
