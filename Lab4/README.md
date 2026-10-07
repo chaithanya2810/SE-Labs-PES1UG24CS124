@@ -42,24 +42,31 @@ Commit: a32871c
 
 The game was tested before and after the changes.
 
-Task 1: Numerical card comparison tested.
-Task 2: Streak, multiplier, and reset behavior tested.
-Task 3: Equal-rank PUSH behavior tested.
-Task 4: Side-by-side reveal tested.
+Task 1: Numerical card comparison tested.  
+
+Task 2: Streak, multiplier, and reset behavior tested.  
+
+Task 3: Equal-rank PUSH behavior tested.  
+
+Task 4: Side-by-side reveal tested.  
+
 
 ## 5. Evidence
 
-1. BEFORE VIDEO
+**BEFORE VIDEO**
+
 This video shows the original High-Low Card Predictor application before making any changes.   
 [Before video](Lab4/before.mp4)
 
-2. AFTER VIDEO
-This video shows the application after fixing the bug and implementing all required features.
+  
+**AFTER VIDEO**
+This video shows the application after fixing the bug and implementing all required features.  
 [After Video](Lab4/after.mp4)
 
-Chat History: https://chatgpt.com/share/6ac63151-3368-83ee-aeac-7751ecd27ddb 
+  
+**Chat History:** https://chatgpt.com/share/6ac63151-3368-83ee-aeac-7751ecd27ddb 
 
-Evidence PDF:  
+**Details/Evidence PDF:**  
 The comprehensive project report and evidence can be found in the accompanying PDF:  
 
 Lab4_VibeCoding_Evidence.pdf
