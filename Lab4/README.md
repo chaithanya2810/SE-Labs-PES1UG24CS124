@@ -70,7 +70,7 @@ This video shows the application after fixing the bug and implementing all requi
 **Details/Evidence PDF:**  
 The comprehensive project report and evidence can be found in the accompanying PDF:  
 
-Lab4_VibeCoding_Evidence.pdf
+[Details PDF](Lab4/Lab4_VibeCoding_Evidence.pdf)
 
 ## 6. Final Commit History
 a32871c Add side-by-side card reveal   
