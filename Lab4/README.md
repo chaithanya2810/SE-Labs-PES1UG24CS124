@@ -51,27 +51,33 @@ Task 4: Side-by-side reveal tested.
 
 ## 5. Evidence
 
+Demonstrates the baseline state of the project before modifications were applied.  
 [Before video](Lab4/before.mp4)
 
+
+Demonstrates the finalized version, showcasing the successful implementation of "Vibe Coding" techniques and features.
 [After Video](Lab4/after.mp4)
 
 Chat History: https://chatgpt.com/share/6ac63151-3368-83ee-aeac-7751ecd27ddb 
 
-Evidence PDF:
+Evidence PDF:  
+The comprehensive project report and evidence can be found in the accompanying PDF:  
+
 Lab4_VibeCoding_Evidence.pdf
 
 ## 6. Final Commit History
-a32871c Add side-by-side card reveal
-454e103 Add tie evaluation rules
-3d09bfd Add consecutive win streak multipliers
-28de9cd Fix card rank comparision from str to numeric
+a32871c Add side-by-side card reveal   
+454e103 Add tie evaluation rules  
+3d09bfd Add consecutive win streak multipliers  
+28de9cd Fix card rank comparision from str to numeric  
 70644f6 Update game_engine.py
 
 ## 7. Submission Contents
+```text
 Lab-4/
 ├── README.md
 ├── before.mp4
 ├── after.mp4
 └── Lab4_VibeCoding_Evidence.pdf
-
+```
 All four tasks were implemented, tested, committed separately, and pushed to the individual repository.
