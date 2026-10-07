@@ -57,14 +57,12 @@ Task 4: Side-by-side reveal tested.
 **BEFORE VIDEO**
 
 This video shows the original High-Low Card Predictor application before making any changes.   
-[Before video](Lab4/before.mp4)
-
+https://drive.google.com/file/d/1hk89N13aUNrVI1nAjNT0PR8Xrdip7OL6/view?usp=drivesdk  
   
 **AFTER VIDEO**
 This video shows the application after fixing the bug and implementing all required features.  
-[After Video](Lab4/after.mp4)
+https://drive.google.com/file/d/1xlNWQt7jShY9S2aW8alI44_N13H711S8/view?usp=drivesdk  
 
-  
 **Chat History:** https://chatgpt.com/share/6ac63151-3368-83ee-aeac-7751ecd27ddb 
 
 **Details/Evidence PDF:**  
@@ -83,8 +81,6 @@ a32871c Add side-by-side card reveal
 ```text
 Lab-4/
 ├── README.md
-├── before.mp4
-├── after.mp4
 └── Lab4_VibeCoding_Evidence.pdf
 ```
 All four tasks were implemented, tested, committed separately, and pushed to the individual repository.
