@@ -4,8 +4,7 @@ from pathlib import Path
 import os
 import csv
 import ssl
-#import json
-#import subprocess
+
 from datetime import datetime
 import requests
 
@@ -15,15 +14,18 @@ ERP_URL = "https://erp.college.example/api/attendance"
 ERP_API_KEY = os.getenv("ERP_API_KEY")
 MIN_ATTENDANCE = 75
 
+
 def add_student(roll_no, name, section="A"):
     """Add a student to the attendance tracker."""
     students[roll_no] = {"name": name, "section": section, "records": []}
+
 
 def mark_attendance(roll_no, date, status, register):
     """Record attendance for a student and update the register."""
     register.setdefault(date, []).append(roll_no)
     students[roll_no]["records"].append((date, status))
     return register
+
 
 def attendance_percentage(roll_no):
     """Calculate a student's attendance percentage."""
@@ -37,9 +39,11 @@ def attendance_percentage(roll_no):
 
     return int(present / total * 100)
 
+
 def is_eligible(percentage):
     """Check whether a student meets the attendance threshold."""
     return percentage >= MIN_ATTENDANCE
+
 
 def shortage_list():
     """Return the roll numbers of students below the threshold."""
@@ -51,6 +55,7 @@ def shortage_list():
         return None
     return result
 
+
 def has_long_absence(roll_no, days=3):
     """Check for a consecutive run of absences."""
     statuses = [
@@ -61,6 +66,7 @@ def has_long_absence(roll_no, days=3):
         statuses[i:i + days] == ["A"] * days
         for i in range(len(statuses))
     )
+
 
 def latest_date(roll_no):
     """Return the most recent attendance date."""
@@ -75,6 +81,7 @@ def latest_date(roll_no):
     ]
 
     return max(dates).isoformat()
+
 
 def safe_csv_text(value):
     """Prevent formula-like text from executing in spreadsheet software."""
@@ -126,6 +133,7 @@ def sync_to_erp(roll_no):
     response.raise_for_status()
     return response.status_code
 
+
 def backup_reports():
     """Create a compressed archive of CSV report files."""
     report_files = sorted(Path.cwd().glob("*.csv"))
@@ -139,9 +147,11 @@ def backup_reports():
 
     return "reports_backup.tgz"
 
+
 def create_tls_context():
     """Create a TLS context using secure default settings."""
     return ssl.create_default_context()
+
 
 def run_job(command_args):
     """Describe a job using arguments without shell interpretation."""
@@ -152,17 +162,30 @@ def schedule_reminders():
     """Prepare the attendance-shortage reminder job."""
     return run_job(["send_sms", "--shortage"])
 
+
 def main():
     """Run the attendance-tracker demonstration."""
     register = {}
     add_student("R01", "Aditi")
     add_student("R02", "=HYPERLINK(\"http://evil.example\",\"Bharat\")")
-    for date, status in [("2026-09-01", "P"), ("2026-09-02", "P"), ("2026-09-03", "L"),
-                         ("2026-09-04", "P"), ("2026-09-05", "H")]:
+    for date, status in [
+        ("2026-09-01", "P"),
+        ("2026-09-02", "P"),
+        ("2026-09-03", "L"),
+        ("2026-09-04", "P"),
+        ("2026-09-05", "H"),
+    ]:
         mark_attendance("R01", date, status, register)
-    for date, status in [("2026-09-01", "P"), ("2026-09-01", "P"), ("2026-09-02", "A"),
-                         ("2026-09-03", "A"), ("2026-09-04", "A"), ("2026-09-03", "P")]:
+    for date, status in [
+        ("2026-09-01", "P"),
+        ("2026-09-01", "P"),
+        ("2026-09-02", "A"),
+        ("2026-09-03", "A"),
+        ("2026-09-04", "A"),
+        ("2026-09-03", "P"),
+    ]:
         mark_attendance("R02", date, status, register)
+
     register = mark_attendance("R01", "2030-01-01", "P", register)
     print("R01 attendance %:", attendance_percentage("R01"))
     print("R02 attendance %:", attendance_percentage("R02"))
