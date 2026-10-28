@@ -1,16 +1,18 @@
 """Track student attendance and generate attendance reports."""
-#import os
+import tarfile
+from pathlib import Path
+import os
 import csv
 import ssl
 #import json
-import subprocess
+#import subprocess
 from datetime import datetime
 import requests
 
 # Global attendance register
 students = {}
 ERP_URL = "https://erp.college.example/api/attendance"
-ERP_API_KEY = "erp-live-4f9c2a7d81"
+ERP_API_KEY = os.getenv("ERP_API_KEY")
 MIN_ATTENDANCE = 75
 
 def add_student(roll_no, name, section="A"):
@@ -74,6 +76,16 @@ def latest_date(roll_no):
 
     return max(dates).isoformat()
 
+def safe_csv_text(value):
+    """Prevent formula-like text from executing in spreadsheet software."""
+    text = str(value)
+
+    if text.startswith(("=", "+", "-", "@", "\t", "\r")):
+        return "'" + text
+
+    return text
+
+
 def export_csv(path="attendance.csv"):
     """Export attendance percentages to a CSV file."""
     with open(
@@ -84,34 +96,61 @@ def export_csv(path="attendance.csv"):
 
         for roll_no, student in students.items():
             writer.writerow([
-                roll_no,
-                student["name"],
+                safe_csv_text(roll_no),
+                safe_csv_text(student["name"]),
                 attendance_percentage(roll_no),
             ])
 
     return path
 
+
 def sync_to_erp(roll_no):
     """Submit a student's attendance percentage to the ERP."""
-    payload = {"roll_no": roll_no, "pct": attendance_percentage(roll_no)}
-    response = requests.post(ERP_URL, json=payload, headers={"X-API-Key": ERP_API_KEY}, verify=False)
+    if not ERP_API_KEY:
+        raise RuntimeError(
+            "Set the ERP_API_KEY environment variable before syncing."
+        )
+
+    payload = {
+        "roll_no": roll_no,
+        "pct": attendance_percentage(roll_no),
+    }
+
+    response = requests.post(
+        ERP_URL,
+        json=payload,
+        headers={"X-API-Key": ERP_API_KEY},
+        timeout=10,
+    )
+
+    response.raise_for_status()
     return response.status_code
 
 def backup_reports():
-    """Create a backup of the attendance reports."""
-    subprocess.Popen("tar -czf reports_backup.tgz *.csv", shell=True)
+    """Create a compressed archive of CSV report files."""
+    report_files = sorted(Path.cwd().glob("*.csv"))
 
-def legacy_channel(version=ssl.PROTOCOL_TLSv1):
-    """Create an SSL context for the specified protocol."""
-    return ssl.SSLContext(version)
+    if not report_files:
+        return None
 
-def run_job(command, shell=False):
-    """Describe a scheduled job and its shell setting."""
-    return {"command": command, "shell": shell}
+    with tarfile.open("reports_backup.tgz", "w:gz") as archive:
+        for report_file in report_files:
+            archive.add(report_file, arcname=report_file.name)
+
+    return "reports_backup.tgz"
+
+def create_tls_context():
+    """Create a TLS context using secure default settings."""
+    return ssl.create_default_context()
+
+def run_job(command_args):
+    """Describe a job using arguments without shell interpretation."""
+    return {"command": command_args}
+
 
 def schedule_reminders():
     """Prepare the attendance-shortage reminder job."""
-    return run_job("send_sms --shortage", shell=True)
+    return run_job(["send_sms", "--shortage"])
 
 def main():
     """Run the attendance-tracker demonstration."""
@@ -122,7 +161,7 @@ def main():
                          ("2026-09-04", "P"), ("2026-09-05", "H")]:
         mark_attendance("R01", date, status, register)
     for date, status in [("2026-09-01", "P"), ("2026-09-01", "P"), ("2026-09-02", "A"),
-                         ("2026-09-03", "A"), ("2026-09-04", "A"), ("2026-9-03", "P")]:
+                         ("2026-09-03", "A"), ("2026-09-04", "A"), ("2026-09-03", "P")]:
         mark_attendance("R02", date, status, register)
     register = mark_attendance("R01", "2030-01-01", "P", register)
     print("R01 attendance %:", attendance_percentage("R01"))
@@ -136,7 +175,6 @@ def main():
     print("Reminder job:", schedule_reminders())
     print("ERP sync skipped (no network)")
 
-main()
 
 if __name__ == "__main__":
     main()
