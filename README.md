@@ -57,9 +57,9 @@ A campus parking reservation system built around three actors: **Student**, **Se
 
 | Lab | What I did | Links |
 |-----|------------|-------|
-| **Lab 1** | Wrote 5 functional and 2 non-functional requirements with acceptance criteria, drew the UML use-case diagram (`«include»` / `«extend»`), and wrote the flow for *Reserve Parking Slot* | [Lab 1 README](Lab1/README.md) · [Requirements Table](digital-parking-reservation-gateway/requirements/requirements-table.md) · [Use-Case Flow](digital-parking-reservation-gateway/use-case-flow/reserve-parking-slot.md) |
-| **Lab 2** | Planned the project in Jira Scrum: Epics, User Stories, Story Points, split into two sprints | [Lab 2 README](Lab2/README.md) · [Lab 2 PDF](digital-parking-reservation-gateway/Lab2.pdf) |
-| **Lab 3** | UML component diagram with 5 components, and chose Client-Server architecture with a written justification | [Lab 3 README](Lab3/README.md) · [Architectural Justification](digital-parking-reservation-gateway/Lab3_Architectural_Justification.pdf) · [Component Diagram](digital-parking-reservation-gateway/Lab3_Component_Diagram.png) |
+| **Lab 1** | Wrote 5 functional and 2 non-functional requirements with acceptance criteria, drew the UML use-case diagram (`«include»` / `«extend»`), and wrote the flow for *Reserve Parking Slot* | [Lab 1 README](Lab1/README.md)   · [Requirements Table](digital-parking-reservation-gateway/requirements/requirements-table.md)   · [Use-Case Flow](digital-parking-reservation-gateway/use-case-flow/reserve-parking-slot.md) |
+| **Lab 2** | Planned the project in Jira Scrum: Epics, User Stories, Story Points, split into two sprints | [Lab 2 README](Lab2/README.md)   · [Lab 2 PDF](digital-parking-reservation-gateway/Lab2.pdf) |
+| **Lab 3** | UML component diagram with 5 components, and chose Client-Server architecture with a written justification | [Lab 3 README](Lab3/README.md)   · [Architectural Justification](digital-parking-reservation-gateway/Lab3_Architectural_Justification.pdf)   · [Component Diagram](digital-parking-reservation-gateway/Lab3_Component_Diagram.png) |
 
 ---
 
@@ -74,10 +74,10 @@ Fixed the existing bug in the High-Low Card Predictor and added the features fro
 
 Each task was committed separately and tested before and after the changes.
 
-- [Lab 4 README](Lab4/README.md)
-- [Details PDF](Lab4/Lab_4_Details.pdf)
-- [Chat history](Lab4/chat_history.pdf)
-- [Individual game repo](https://github.com/chaithanya2810/55_card_predictor)
+- [Lab 4 README](Lab4/README.md)  
+- [Details PDF](Lab4/Lab_4_Details.pdf)  
+- [Chat history](Lab4/chat_history.pdf)  
+- [Individual game repo](https://github.com/chaithanya2810/55_card_predictor)  
 
 ---
 
@@ -92,7 +92,7 @@ Ran Pylint, Bandit and Flake8 on a Python attendance tracker, then fixed the iss
 | Flake8 | Multiple violations | No violations |
 
 - [Lab 5 README](Lab5/README.md)
-- [Fixed code](Lab5/attendance_tracker.py) · [Issues table](Lab5/issues.md) · [Reflection](Lab5/reflection.md)
+- [Fixed code](Lab5/attendance_tracker.py)   · [Issues table](Lab5/issues.md)   · [Reflection](Lab5/reflection.md)
 
 ---
 
