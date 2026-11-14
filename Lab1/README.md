@@ -26,7 +26,7 @@ Contains:
 - Acceptance Criteria
 - Rationale
 
-[Requirements Table](digital-parking-reservation-gateway/requirements/requirements-table.md)
+[Requirements Table](SE-Labs-PES1UG24CS124/digital-parking-reservation-gateway/requirements/requirements-table.md)
 
 ### 2. UML Use-Case Diagram
 
