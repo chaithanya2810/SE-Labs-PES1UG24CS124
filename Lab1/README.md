@@ -26,7 +26,7 @@ Contains:
 - Acceptance Criteria
 - Rationale
 
-[Requirements Table](requirements/requirements-table.md)
+[Requirements Table](digital-parking-reservation-gateway/requirements/requirements-table.md)
 
 ### 2. UML Use-Case Diagram
 
@@ -38,11 +38,11 @@ Contains:
 - `«include»` relationship
 - `«extend»` relationship
 
-![Use-Case Diagram](uml/usecase-diagram.png)
+![Use-Case Diagram](digital-parking-reservation-gateway/uml/usecase-diagram.png)
 
 ### 3. Use-Case Flow Specification
 
 Core use case:
 - Reserve Parking Slot
 
-[Use-Case Flow](use-case-flow/reserve-parking-slot.md)
+[Use-Case Flow](digital-parking-reservation-gateway/use-case-flow/reserve-parking-slot.md)
