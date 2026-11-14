@@ -1,10 +1,10 @@
 # Software Engineering Labs
 
-**Name:** Chaithanya N
-**SRN:** PES1UG24CS124
-**Section:** B
-**University:** PES University, Bengaluru
-**Course:** Software Engineering Lab
+**Name:** Chaithanya N  
+**SRN:** PES1UG24CS124  
+**Section:** B  
+**University:** PES University, Bengaluru  
+**Course:** Software Engineering Lab  
 
 This repo has all 7 of my SE lab submissions. Labs 1 to 3 are for one project, the **Digital Parking Reservation Gateway**. Labs 4 to 7 are separate hands-on labs (vibe coding, static analysis, coverage, fuzzing). Every lab folder has its own README with the details, linked below.
 
