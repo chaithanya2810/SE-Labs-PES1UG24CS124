@@ -38,11 +38,11 @@ Contains:
 - `«include»` relationship
 - `«extend»` relationship
 
-![Use-Case Diagram](digital-parking-reservation-gateway/uml/usecase-diagram.png)
+![Use-Case Diagram](../digital-parking-reservation-gateway/uml/usecase-diagram.png)
 
 ### 3. Use-Case Flow Specification
 
 Core use case:
 - Reserve Parking Slot
 
-[Use-Case Flow](digital-parking-reservation-gateway/use-case-flow/reserve-parking-slot.md)
+[Use-Case Flow](../digital-parking-reservation-gateway/use-case-flow/reserve-parking-slot.md)
